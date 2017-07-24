@@ -29,7 +29,6 @@ describe( 'user queries ', () => {
     const username = 'no'
     Users.findByUsername(username)
     .then( result => {
-      console.log('result',result)
       expect(result[0].email).to.eql('no@no.gov')g
     })
     .then(done, done)

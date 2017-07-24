@@ -4,7 +4,6 @@ const knex = require('../knex')
 const createUser = ( email, username, password ) => {
   return knex.select().from('users').where({username: username})
     .then( result => {
-      console.log('result >>>>>>',result.length)
       if(!result.length) {
         return knex('users')
         .insert({
