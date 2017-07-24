@@ -1,0 +1,19 @@
+<nav class="navbar is-transparent">
+  <div class="container">
+      <div class="nav-left">
+        <a class="nav-item" href="/">ROAM</a>
+      <!-- <span class="nav-toggle">
+        <span></span>
+      </span> -->
+      <div class="nav-right nav-menu">
+        <% if (locals.session) { %>
+          <a class="nav-item is-tab" href="/user/profile">Profile</a>
+          <a class="nav-item is-tab" href="/logout">Logout</a>
+        <% } else { %>
+          <a class="nav-item is-tab" href="/login" >Login</a>
+          <a class="nav-item is-tab" href="/register">Register</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

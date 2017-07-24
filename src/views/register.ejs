@@ -1,0 +1,28 @@
+<% include partials/header.ejs %>
+
+<div class="columns">
+    <section class="section" >
+    </section>
+
+    <div class="column register is-half is-offset-one-quarter">
+
+        <form class="box" action="/register" method="POST">
+          <label> Create an account</label>
+          <div class="field">
+            <input class="input is-small" type="email" name="email" placeholder="email">
+          </div>
+          <div class="field">
+            <input class="input is-small" type="text" name="username" placeholder="username">
+          </div>
+          <div class="field">
+            <input class="input is-small" type="password" name="password" placeholder="password">
+          </div>
+          <input class="button" type="submit" value="submit">
+        </form>
+
+    </div>
+
+</div>
+
+
+<%- include partials/footer %>
