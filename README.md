@@ -1,3 +1,6 @@
 - npm install  to install dependencies
 - createdb myApp to create database
-- npm run start   to run app on localhost:3000
+- knex migrate:latest to create schema
+- knex seed:run to populate tables
+- npm run start to run app on localhost:3000
+- go to register on the home page and create an account
