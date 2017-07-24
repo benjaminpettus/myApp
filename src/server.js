@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const path = require('path')
+const passport = require('../auth/passport')
 
 
 const routes = require('./server/routes')
@@ -17,7 +18,7 @@ app.use( bodyParser.json() )
 
 app.use( express.static( 'public' ))
 
-
+app.use( passport.initialize() )
 app.use( routes )
 
 const server = app.listen( process.env.PORT || 3000, () => {

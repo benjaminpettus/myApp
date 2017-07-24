@@ -15,7 +15,9 @@ preAuth.get( '/login', ( request, response ) => {
 preAuth.post( '/login',
   passport.authenticate('local',
     { successRedirect: '/profile',
-      failureRedirect: '/login'
+      failureRedirect: '/login',
+      session: false
+
     })
 )
 
