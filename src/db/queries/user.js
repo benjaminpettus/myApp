@@ -27,7 +27,7 @@ const findUserById = (id) => {
 
 const findByUsername = ( username ) => {
   return knex.select().from('users').where({ username: username })
-  .then(result => result )
+  .then( result => result )
   .catch( error => error )
 }
 
