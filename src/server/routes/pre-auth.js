@@ -16,9 +16,7 @@ preAuth.get( '/login', ( request, response ) => {
 preAuth.post( '/login',
   passport.authenticate('local',
     { successRedirect: '/profile',
-      failureRedirect: '/login',
-      session: false
-
+      failureRedirect: '/login'
     })
 )
 
@@ -34,6 +32,11 @@ preAuth.post( '/register', (request, response) => {
       response.redirect('login')
     })
   })
+})
+
+preAuth.get( '/logout', ( request, response ) => {
+  request.logout()
+  response.redirect('/')
 })
 
 module.exports = preAuth
