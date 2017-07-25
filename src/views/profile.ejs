@@ -1,5 +1,64 @@
 <%- include partials/header %>
+<div class="columns">
+  <div class="column card is-4">
+    <div class="card-image">
+      <figure class="image is-480x480">
+        <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4">
+            Username:
+            <%- data[0].username %></p>
+        </div>
+      </div>
+      <div class="content">
+        <p>email:
+          <%- data[0].email %>
+        </p>
+        <p>
+          Current city:
+          <%- data[0].current_city %>
+        </p>
+        <small>
+          Account Created:<br> <%- data[0].created_on %>
+        </small>
+      </div>
+    </div>
+    <a id="open-modal" class="button is-info" type="submit" name="" value="">Edit Profile</a>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+        </section>
+        <footer class="modal-card-foot">
+          <a class="button is-success">Save changes</a>
+          <a class="button">Cancel</a>
+        </footer>
+    </div>
+  </div>
+  </div>
 
+  <div class="column">
+
+    <div class="box">
+      <div class="content">
+        <h3>This Place is cool</h3>
+        <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
 

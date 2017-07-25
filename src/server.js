@@ -11,6 +11,7 @@ const routes = require('./server/routes')
 
 
 
+
 app.set( 'view engine', 'ejs' )
 app.set( 'views', path.join( __dirname + '/views' ))
 
@@ -25,7 +26,7 @@ app.use(session({
   resave: true,
   saveUninitialized: false,
   cookie: {
-    expires: 100000
+    expires: 500000
   }
 }))
 

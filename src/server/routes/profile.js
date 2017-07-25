@@ -4,11 +4,20 @@ const Users = require('../../db/queries/user')
 
 
 profile.get( '/', ( request, response ) => {
-  console.log('request.session.passport &&&&',request.session.passport)
-  console.log('request.cookies ()()()()',request.cookies)
-  response.render( 'profile' )
+  const { user } = request.session.passport
+  Users.findUserById(user)
+  .then( result => {
+    response.redirect( `/profile/${result[0].username}` )
+  })
 })
 
+profile.get('/:username', ( request, response ) => {
+  const { username } = request.params
+  Users.findByUsername( username )
+    .then( result => {
+      response.render('profile', { data: result, session: request.session })
+    })
+})
 
 
 module.exports = profile

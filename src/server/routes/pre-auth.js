@@ -29,14 +29,15 @@ preAuth.post( '/register', (request, response) => {
   bcrypt.hash(password, 10, (error, hash) => {
     Users.createUser( email, username, hash )
     .then( () => {
+      console.log('response _+_+_+_+_+ ',response )
       response.redirect('login')
     })
   })
 })
 
 preAuth.get( '/logout', ( request, response ) => {
-  request.logout()
-  response.redirect('/')
+    response.clearCookie('user_sid')
+    .redirect('/login')
 })
 
 module.exports = preAuth
