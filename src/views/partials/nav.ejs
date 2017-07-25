@@ -6,6 +6,7 @@
         <span></span>
       </span> -->
       <div class="nav-right nav-menu">
+        <% console.log('ejs locals :::',locals)%>
         <% if (locals.session) { %>
           <a class="nav-item is-tab" href="/user/profile">Profile</a>
           <a class="nav-item is-tab" href="/logout">Logout</a>

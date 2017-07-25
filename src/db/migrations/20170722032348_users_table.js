@@ -6,7 +6,7 @@ exports.up = function( knex, Promise ) {
     table.string('username')
     table.string('password')
     table.string('current_city')
-    table.timestamp('created_at').defaultTo(knex.fn.now())
+    table.date('created_on', true).defaultTo(knex.fn.now())
   })
 };
 
