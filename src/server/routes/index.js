@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const preAuth = require('./pre-auth')
 const profile = require('./profile')
+const city = require('./city')
 
 
 
@@ -15,5 +16,6 @@ const sessionChecker = (request, response, next) => {
 router.use(preAuth)
 router.use(sessionChecker)
 router.use('/profile', profile)
+router.use('/city', city)
 
 module.exports = router
