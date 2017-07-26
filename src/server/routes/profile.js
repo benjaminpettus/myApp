@@ -13,8 +13,9 @@ profile.get( '/', ( request, response ) => {
 
 profile.get('/:username', ( request, response ) => {
   const { username } = request.params
-  Users.findByUsername( username )
+  Users.userAndPosts( username )
     .then( result => {
+      console.log('result <><><><',result )
       response.render('profile', { data: result, session: request.session })
     })
 })

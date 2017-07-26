@@ -11,5 +11,3 @@ document.querySelector('#open-modal').addEventListener('click', function(event) 
     html.classList.remove('is-clipped');
   });
 });
-
-console.log('qhaaaajdkl;ajdkl;ad')
